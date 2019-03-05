@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-1.4.2.js"></script>
+<script type="text/javascript">
+
+
+setInterval(function(){
+	var w=document.body.parentElement.clientWidth;
+	var h=document.body.parentElement.clientHeight;
+	var img=$("<img src='../day11/zombimgs/zomb0.png'>")
+	//设置图片随机大小
+	var size=Math.floor(Math.random()*40)+40+"px";
+	//设置随机横向位置
+	var left=Math.floor(Math.random()*w)+"px";
+	img.css({"width":size,"height":size,"top":-size,"left":left,"position":"absolute"})
+	//添加到body里
+	$("body").append(img);
+	
+	//让图片从当前位置移动到窗口最下面
+	var time=Math.floor(Math.random()*2000)+1000;
+	img.animate({"top":h-parseInt(size)+"px"},time).fadeOut(1000,function(){
+		$(this).remove();
+	})
+	
+	
+},100)
+
+
+</script>
+<style type="text/css">
+body{background-color: red;overflow: hidden;}
+</style>
+</head>
+<body>
+
+</body>
+</html>

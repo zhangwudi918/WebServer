@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form表单</title>
+</head>
+<body>
+	<form action="http://www.tmooc.cn" method="get">
+		<!-- name代表提交数据时的key   value代表文本框的初始值    palceholder:站位文本
+ maxlength:最大长度     redonly:只读，不能更改内容
+
+-->
+		<input type="text" name="username" value="xxx" placeholder="用户名"
+			maxlength="5" readonly="readonly"> <br> <input
+			type="password" name="password" maxlength="5" placeholder="密码">
+		<br>
+		<!-- 单选框 
+		checked  默认选中
+		 -->
+		性别：<input type="radio" name="gender" value="nan" checked="checked"
+			id="nan"> <label for="nan">男</label> <input type="radio"
+			name="gender" value="nv" id="nv"><label for="nv">女</label> <br>
+		爱好：
+		<!-- 多选框 -->
+		<input type="checkbox" name="hobby" value="code" checked="checked">撸代码
+		<input type="checkbox" name="hobby" value="wz">王者荣耀 <input
+			type="checkbox" name="hobby" value="gdx">搞对象 <br>
+		<!-- 文件选择器 -->
+		靓照：<input type="file" name="pic"> <br>
+		<!-- 日期选择器 -->
+		生日：<input type="date" name="birthday"> <br>
+		<!-- 隐藏域:当需要给服务器传递参数，但是此参数又不需要给用户展示时，使用隐藏域。 -->
+		<input type="hidden" name="xxx" value="yyy"> <br>
+		<!-- 文本域(获取用户输入大量文本内容时，单行内容使用文本框) row：行数    cols：列数 -->
+		个人介绍：
+		<textarea rows="3" cols="20">这家伙很懒，什么也没留下。。。</textarea>
+		<br>
+		<!-- 下拉选-->
+		所在地： <select name="city">
+			<option>请选择</option>
+			<option value="bj">北京</option>
+			<option value="sh" selected="selected">上海</option>
+			<option value="gz">广州</option>
+
+
+		</select>
+
+		<hr>
+		<!-- submit 提交按钮 -->
+		<input type="submit" value="注册">
+	<!-- reset 重置按钮 -->
+	<input type="reset" value="reset">
+	<!-- 自定义按钮 -->
+	<input type="button" value="按钮">
+	
+	</form>
+
+
+</body>
+</html>

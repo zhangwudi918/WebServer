@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var arr = [ [ "秦皇岛", "唐山", "石家庄" ], [ "青岛", "烟台", "潍坊" ],
+			[ "太原", "运城", "大同" ] ];
+
+	function myfn() {
+		s2.innerHTML = "<option>请选择</option>"
+		for (var i = 0; i < arr[s1.value].length; i++) {
+			s2.innerHTML += "<option>" + arr[s1.value][i] + "</option>"
+
+		}
+	}
+</script>
+</head>
+<body>
+
+	<select id="s1" onchange="myfn()">
+
+		<option>请选择</option>
+		<option value="0">河北</option>
+		<option value="1">山东</option>
+		<option value="2">山西</option>
+
+	</select>
+	<select id="s2">
+
+		<option>请选择</option>
+
+	</select>
+</body>
+</html>

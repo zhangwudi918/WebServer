@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 第二种引入样式：内部样式      好处：可以本页面复用     弊端：不能多页面复用 -->
+<style type="text/css">
+/* 通过选择器找到对应的标签（元素）*/
+div {
+	background-color: green
+}
+
+
+</style>
+<!-- 外部样式 外部样式 -->
+<link rel="stylesheet" href="first.css">
+</head>
+<body>
+	<!-- 第一种引入方式：内联样式  弊端：不能多标签复用 -->
+	<div style="color: red; border: 1px solid blue">我是一个div</div>
+	<div style="color: red; border: 1px solid blue">我也是一个div</div>
+	<!--  -->
+	<span>我是span1</span>
+	<span>我是span2</span>
+
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function checkfn(){
+var reg=/^\w{6,10}$/;
+if(reg.test(i1.value)){
+	s1.className="ok";
+}else{
+	s1.className="err";
+
+}
+
+if(reg.test(i2.value)){
+	s2.className="ok";
+}else{
+	s2.className="err";
+
+}
+
+}
+
+function usernamefn(){
+	var reg=/^\w{6,10}$/;
+	if(reg.test(i1.value)){
+		s1.className="ok";
+	}else{
+		s1.className="err";
+
+	}
+}
+
+function passwordfn(){
+	var reg=/^\w{6,10}$/;
+	if(reg.test(i2.value)){
+		s2.className="ok";
+	}else{
+		s2.className="err";
+
+	}
+}
+
+</script>
+
+<style type="text/css">
+.ok{color:green;}
+.err{color:red;}
+
+</style>
+
+
+</head>
+<body>
+用户名：<input type="text" id="i1" onblur="usernamefn()"><span id="s1">由6-10位数字字母下划线组成</span><br>
+密码：<input type="text" id="i2" onblur="passwordfn()"><span id="s2">由6-10位数字字母下划线组成</span><br>
+<input type="button" value="校验"  onclick="checkfn()">
+
+</body>
+</html>

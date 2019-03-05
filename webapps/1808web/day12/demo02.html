@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	/* 页面加载完成事件 */
+	/* onload=function(){} */
+	/* jq页面加载完成事件 */
+	/* $(document).ready(function(){}) */
+
+	/* js动态绑定 */
+	/* 	var btn=document.getElementById("btn")
+	 btn.onclick=function(){
+	
+	 }
+	 }) */
+	/* jq动态绑定 */
+	$(function() {
+		$("#btn").click(function() {
+			alert("jq动态绑定成功")
+		})
+	})
+</script>
+</head>
+<body>
+	<input id="btn" type="button" value="点我试试！">
+
+
+
+</body>
+</html>

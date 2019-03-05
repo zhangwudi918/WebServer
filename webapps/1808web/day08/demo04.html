@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var arr=[12,32,2,45,634,22,50]
+function sortfn(a,b){
+	return a-b;//生序
+	//  return b-a;   降序
+}
+
+//如果方法被当作参数传递不写括号
+//方法调用时才写括号
+
+/* 为什么需要使用自定义排序方法：如果数组中保存的是对象类型，使用此方法可以对对象中任意属性排序
+Person :age   salary   gender
+arr=[p1,p2,p3,p4,p5]
+function srotfn(a,b){
+	return a.age-b.age;   按年龄升序 反过来降序
+}
+
+
+*/
+  
+ //给排序方法传递一个匿名函数
+ arr.sort(function(a,b){return a-b});
+ 
+ /* 第三种声明函数方式 
+ 
+ var myfn=new Function("x","alert(x)");
+ myfn(18);
+ 
+ 传递匿名函数
+ arr.sort(new Function("a","b","return a-b"));
+ 
+ 
+ */
+ 
+//arr.sort(sortfn);
+alert(arr);
+</script>
+
+
+</head>
+<body>
+
+
+</body>
+</html>

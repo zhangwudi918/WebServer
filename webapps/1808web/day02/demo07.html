@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="http://www.tmooc.cn" method="get">
+	<h1 align="center">注册表单</h1>
+		<table border="1" cellspacing="0" align="center">
+			
+			
+			<tr>
+				<td>用户名：</td>
+				<td><input type="text" name="username" placeholder="用户名不得超过16位"
+					maxlength="16"></td>
+			</tr>
+			<tr>
+				<td>密码：</td>
+				<td><input type="password" name="password" placeholder="请输入密码"
+					maxlength="16"></td>
+			</tr>
+			<tr>
+				<td>确认密码：</td>
+				<td><input type="password" name="passwordagain"
+					placeholder="确认密码" maxlength="16"></td>
+			</tr>
+			<tr>
+				<td>昵称：</td>
+				<td><input type="text" name="nickname" placeholder="输入昵称"
+					maxlength="16"></td>
+			</tr>
+
+			<tr>
+				<td>性别：</td>
+				<td><input type="radio" name="gender" value="nan" id="nan"><label
+					for="nan">男</label> <input type="radio" name="gender" value="nv"
+					id="nv"><label for="nv">女</label></td>
+			</tr>
+
+			<tr>
+				<td>爱好：</td>
+				<td><input type="checkbox" name="hobby" value="lq">篮球 <input
+					type="checkbox" name="hobby" value=wz>王者荣耀 <input
+					type="checkbox" name="hobby" value=gdx>搞对象</td>
+			</tr>
+
+
+			<tr>
+				<td>生日：</td>
+				<td><input type="date" name="brithday"></td>
+			</tr>
+
+			<tr>
+				<td>头像：</td>
+				<td><input type="file" name=pic></td>
+			</tr>
+
+			<tr>
+				<td>所在地：</td>
+				<td><select name="city">
+						
+						<option value="bj">北京</option>
+						<option value="sh">上海</option>
+						<option value="gz">广州</option>
+
+
+				</select></td>
+			</tr>
+
+			<tr>
+				<td>自我介绍：</td>
+				<td><textarea name="intra" rows="3" cols="20">说点什么。。。</textarea></td>
+			</tr>
+
+			<tr>
+				<td>验证码：</td>
+				<td>
+				<input type="text" name="yzm">
+				<img src="../../imgs/2.gif" width="20px">
+				</td>
+			</tr>
+
+			<tr>
+				<td colspan="2" align="center"><input type="submit" value="注册">
+				<input type="reset" value="重置">
+				</td>
+			</tr>
+			
+
+		</table>
+
+	</form>
+
+</body>
+</html>

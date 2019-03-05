@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<servlets>
+	<servlet uri="/myweb/reg" class="com.webserver.servlets.RegServlet"/>
+	<servlet uri="/myweb/login" class="com.webserver.servlets.LoginServlet"/>
+	<servlet uri="/myweb/showAllUser" class="com.webserver.servlets.ShowAllUserServlet"/>
+</servlets>

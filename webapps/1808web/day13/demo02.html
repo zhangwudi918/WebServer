@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+	var arr = [ [ "秦皇岛", "唐山", "石家庄" ], [ "青岛", "烟台", "潍坊" ],
+			[ "太原", "运城", "大同" ] ];
+	$(function() {
+		$("select:first").change(function() {
+			//得到第二个下拉选清空
+			$("select:last").html("<option>请选择</option>")
+
+			var citys = arr[this.value]
+			for (var i = 0; i < citys.length; i++) {
+				var opt = $("<option></option>")
+				opt.text(citys[i]);
+				$("select:last").append(opt);
+			}
+		})
+	})
+</script>
+</head>
+<body>
+	<select>
+		<option>请选择</option>
+		<option value="0">河北</option>
+		<option value="1">山东</option>
+		<option value="2">山西</option>
+
+	</select>
+
+	<select>
+		<option>请选择</option>
+
+	</select>
+</body>
+</html>

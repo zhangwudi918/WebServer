@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function addfn(){
+	var div=document.getElementById("mydiv");
+	for(var i=0;i<10;i++){
+		for(var j=0;j<i+1;j++){
+			div.innerHTML+=("<div></div>")
+		}
+		div.innerHTML+=("<br>")
+
+	}
+}
+
+</script>
+
+<style type="text/css">
+#mydiv>div{width:30px;height:30px;background-color: red;margin: 5px;display: inline-block;}
+
+
+</style>
+
+</head>
+<body>
+<input type="button" value="添加"  onclick="addfn()">
+<div id="mydiv"></div>
+
+</body>
+</html>

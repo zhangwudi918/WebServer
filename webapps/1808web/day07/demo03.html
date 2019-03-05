@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function fn1(){
+	//获取文本框
+	var inp=document.getElementById("myinput");
+	inp.value="又该吃饭了"; 
+}
+
+function fn2(){
+	var inp=document.getElementById("myinput");
+	alert(inp.value);
+}
+
+
+</script>
+</head>
+<body>
+<input type="text" id="myinput">
+
+<input type="button" value="赋值" onclick="fn1()">
+<input type="button" value="取值" onclick="fn2()">
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function username(){
+	var reg=/^\w{6,10}$/;
+	if(reg.test(i1.value)){
+		s1.className="ok";
+		return true;
+	}else{
+		s1.className="err";
+			return false;
+
+	}
+	
+}
+function password(){
+	var reg=/^\w{6,10}$/;
+	if(reg.test(i2.value)){
+		s2.className="ok";
+			return true;
+
+	}else{
+		s2.className="err";
+			return false;
+
+	}
+	
+}
+</script>
+<style type="text/css">
+.ok{ display: none;  /* 让元素隐藏 */}
+.err{display: inline;}
+</style>
+</head>
+<body>
+	<form action="http://doc.tedu.cn" onsubmit="return username()+password()==2">
+
+		用户名：<input type="text" id="i1" onblur="username()"><span id="s1" class="ok">格式错误</span> <br>
+		密码：<input type="text" id="i2" onblur="password()"><span id="s2" class="ok">格式错误</span> <br>
+			<input type="submit" value="注册">
+
+
+	</form>
+
+
+</body>
+</html>

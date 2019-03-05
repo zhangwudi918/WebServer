@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function addfn() {
+		var inp1 = document.getElementById("inp1");
+		var inp2 = document.getElementById("inp2");
+		var mydiv = document.getElementById("mydiv");
+		var str = "<h[]>[a]</h[]>";
+		str = str.replace("[]", inp1.value);
+		str = str.replace("[]", inp1.value);
+		str = str.replace("[a]", inp2.value);
+
+		mydiv.innerHTML += str;
+	}
+</script>
+<style type="text/css">
+#mydiv>div {
+	width: 30px;
+	height: 30px;
+	background-color: red;
+}
+</style>
+
+
+</head>
+<body>
+	<input type="text" id="inp1">
+	<input type="text" id="inp2">
+	<input type="button" value="+" onclick="addfn()">
+	<div id="mydiv"></div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+
+function allfn(){
+	//得到所有商品多选框
+	var arr=document.getElementsByName("item");
+	//获取全选事件源
+	var obj=event.target||event.srcElement;
+	//遍历每一个商品多选框
+	for(var i=0;i<arr.length;i++){
+		arr[i].checked=obj.checked;
+	}
+	calfn();
+}
+
+function calfn(){
+	var arr=document.getElementsByName("item");
+	var total=0;
+	for(var i=0;i<arr.length;i++){
+		var input=arr[i];
+		if(input.checked){
+			total+=parseFloat(input.value);
+			
+		}
+	}
+	total_p.innerText="总价："+total+"元";
+}
+
+</script>
+</head>
+<body>
+	<h3>订单练习</h3>
+	<input type="checkbox" onclick="calfn()" id="i1" name="item" value="10">
+	<label for="i1">记事本10元</label>
+	<br>
+	<input type="checkbox" onclick="calfn()" id="i2" name="item" value="2000">
+	<label for="i2">手机2000元</label>
+	<br>
+	<input type="checkbox" onclick="calfn()" id="i3" name="item" value="2">
+	<label for="i3">橡皮2元</label>
+	<br>
+	<input type="checkbox" onclick="calfn()" id="i4" name="item" value="3000">
+	<label for="i4">电视机3000元</label>
+	<br>
+	<hr>
+	<input type="checkbox" id="i5" onclick="allfn()">
+	<label for="i5">全选</label>
+	<br>
+	<p id="total_p">总价：0元</p>
+
+</body>
+</html>

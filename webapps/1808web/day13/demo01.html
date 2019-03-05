@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("ul>li>ul").hide();
+		$("#myul>li").click(function() {
+			
+			$(this).children("ul").toggle();
+			$(this).siblings().children("ul").hide();
+		})
+	})
+</script>
+</head>
+<body>
+	<ul id="myul">
+		<!-- this代表事件源li对象 -->
+		<li>同学
+			<ul >
+				<li>刘德华</li>
+				<li>张学友</li>
+				<li>黎明</li>
+				<li>郭富城</li>
+
+			</ul>
+
+		</li>
+		<li>同事
+			<ul >
+				<li>马云</li>
+				<li>马化腾</li>
+				<li>王建林</li>
+				<li>汉少云</li>
+
+			</ul>
+		</li>
+		<li>亲戚
+			<ul >
+				<li>习进平</li>
+				<li>老干妈</li>
+				<li>老娘舅</li>
+				<li>潇洒哥</li>
+
+			</ul>
+		</li>
+
+
+	</ul>
+</body>
+</html>

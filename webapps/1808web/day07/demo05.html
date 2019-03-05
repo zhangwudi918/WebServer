@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+function myfn(flag){
+	var i1=document.getElementById("i1");
+	var i2=document.getElementById("i2");
+	var d1=document.getElementById("d1");
+	var x=parseFloat(i1.value);
+	var y=parseFloat(i2.value);
+	
+		switch(flag){
+		case 1: 
+		d1.innerText=x+y;
+		break;
+		case 2: 
+		d1.innerText=x-y;
+		break;
+		case 3:
+		d1.innerText=x*y;
+		break;
+		case 4: 
+		d1.innerText=x/y;
+		break;
+		}
+		
+}
+</script>
+</head>
+<body>
+<input type="text" id="i1">
+<input type="text" id="i2">
+<input type="button" value="+" onclick="myfn(1)">
+
+<input type="button" value="-" onclick="myfn(2)">
+<input type="button" value="*" onclick="myfn(3)">
+<input type="button" value="/" onclick="myfn(4)">
+
+<div id="d1"></div>
+<h1 id="myh1"></h1>
+</body>
+</html>

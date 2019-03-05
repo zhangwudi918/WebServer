@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function genderfn(){
+	var arr=document.getElementsByName("gender");
+	for(var i=0;i<arr.length;i++){
+		var input=arr[i];
+		//判断是否被选中
+		if(input.checked){
+			alert(input.value);
+		}
+	}
+	
+}
+
+</script>
+</head>
+<body>
+<input type="radio" name="gender" value="nan">男
+<input type="radio" name="gender" value="nv">女
+<input type="button" value="性别"  onclick="genderfn()">
+</body>
+</html>

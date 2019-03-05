@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-1.4.2.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	$(".c1").css("display","none")
+	$("#myul>li").click(function(){
+		$(".c1").css("display","none")
+	$(this).children("ul").toggle();
+	
+	})
+	
+	
+	
+	
+})
+	
+	
+
+
+
+/* 
+	onload = function() {
+		var uls = document.getElementsByClassName("c1");
+		for (var i = 0; i < uls.length; i++) {
+			uls[i].style.display = "none";
+		}
+	}  */
+
+	
+	
+	
+	
+	
+	/* 
+	function myfn(li) {
+		var ul = li.getElementsByTagName("ul")[0];
+		var uls = document.getElementsByClassName("c1");
+		for (var i = 0; i < uls.length; i++) {
+			if (ul != uls[i]) {
+				uls[i].style.display = "none";
+			}
+		}
+
+		if (ul.style.display == "none") {
+			ul.style.display = "block"
+		} else {
+			ul.style.display = "none"
+
+		}
+
+	} */
+</script>
+<!-- <style type="text/css">
+ul>li>ul{
+display: none;
+}
+
+</style> -->
+</head>
+<body>
+	<ul id="myul">
+		<!-- this代表事件源li对象 -->
+		<li >同学
+			<ul class="c1">
+				<li>刘德华</li>
+				<li>张学友</li>
+				<li>黎明</li>
+				<li>郭富城</li>
+
+			</ul>
+
+		</li>
+		<li >同事
+			<ul class="c1">
+				<li>马云</li>
+				<li>马化腾</li>
+				<li>王建林</li>
+				<li>汉少云</li>
+
+			</ul>
+		</li>
+		<li >亲戚
+			<ul class="c1">
+				<li>习进平</li>
+				<li>老干妈</li>
+				<li>老娘舅</li>
+				<li>潇洒哥</li>
+
+			</ul>
+		</li>
+
+
+	</ul>
+</body>
+</html>

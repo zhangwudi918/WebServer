@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+function fn1(){
+	if(confirm("确定跳转吗？")){
+		location.href="http://doc.tedu.cn"
+	}
+	
+}
+function fn2(){
+	var ht=prompt("请输入网址跳转！")
+	location.href=ht;
+
+}
+
+</script>
+</head>
+<body>
+<input type="button" value="按钮" onclick="fn1()">
+<input type="button" value="按钮" onclick="fn2()">
+
+</body>
+</html>

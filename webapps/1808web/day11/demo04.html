@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function downfn(){
+	console.log("按下")
+	//event事件    获取事件鼠标坐标
+	var x=event.clientX;
+	var y=event.clientY;
+	console.log("x:"+x+",y:"+y)
+	var img=document.createElement("img")
+	img.src="../../imgs/2.gif"
+	img.style.position="absolute";
+	img.style.left=x+"px";
+	img.style.top=y+"px";
+	
+	document.body.appendChild(img);
+	
+}
+
+function upfn(){
+	console.log("松开 ")
+}
+
+function movefn(){
+	console.log("移动 ")
+	var x=event.clientX;
+	var y=event.clientY;
+	console.log("x:"+x+",y:"+y)
+	var img=document.createElement("img")
+	img.src="../../imgs/2.gif"
+	img.style.position="absolute";
+	img.style.left=x+"px";
+	img.style.top=y+"px";
+	
+	document.body.appendChild(img);
+	
+}
+
+</script>
+
+
+<style type="text/css">
+div{width:2000px;height:2000px;background-color: blue;}
+
+</style>
+</head>
+<body>
+<div onmousedown="downfn()"  onmouseup="upfn()" onmousemove="movefn()">div1</div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	onload = function() {
+		var imgs = document.getElementsByTagName("img");
+
+		for (var i = 0; i < imgs.length; i++) {
+			//修改图片位置
+			imgs[i].style.top = "0";
+			imgs[i].style.left = i * 200 + "px";
+
+		}
+	}
+
+	function fn() {
+		//开启图片移动的定时器
+		var moveId = setInterval(function() {
+			var imgs = document.getElementsByTagName("img");
+
+			for (var i = 0; i < imgs.length; i++) {
+				var oldLeft = parseFloat(imgs[i].style.left);
+
+				//如果图片移出页面就把第一张图放到最后
+				imgs[i].style.left = oldLeft + "px";
+				oldLeft -= 2;
+				if (-200 == oldLeft) {
+					imgs[i].style.left = "400px";
+					clearInterval(moveId);
+
+				} else {
+					imgs[i].style.left = oldLeft + "px";
+
+				}
+			}
+		}, 10)
+
+	}
+
+	var timeId = setInterval(fn, 3000)
+	function stop() {
+		//定时器停止
+		clearInterval(timeId);
+	}
+
+	function start() {
+		//每次开启新的定时器前停止上一个定时器，避免开启多个定时器
+		clearInterval(timeId);
+		timeId = setInterval(fn, 3000)
+	}
+	
+	//页面失去焦点停止
+	onblur=function(){
+		stop();
+	}
+	//页面得到焦点时重新开始
+	onfocus=function(){
+		start();
+	}
+</script>
+
+<style type="text/css">
+img {
+	width: 200px;
+	height: 150px;
+	position: absolute;
+}
+
+div {
+	width: 200px;
+	height: 150px;
+	border: 1px solid red;
+	position: relative;
+	overflow: hidden;
+}
+</style>
+</head>
+<body>
+	<div onmouseover="stop()" onmouseout="start()">
+		<img src="../../imgs/i.jpg"> <img src="../../imgs/d.jpg">
+		<img src="../../imgs/g.jpg">
+	</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function add(){
+	var div=document.getElementById("mydiv")
+	for(var i=0;i<9;i++){
+	var color=i%2==0?"red":"blue";
+	div.innerHTML+="<div class='"+color+"'></div>"
+	}
+}
+
+</script>
+<style type="text/css">
+#mydiv{width:300px;height:300px;border:1px solid red;}
+#mydiv>div{width:100px;height:100px;float: left;}
+.red{background-color: red;}
+.blue{background-color: blue;}
+
+</style>
+</head>
+<body>
+<input type="button" value="添加" onclick="add()">
+<div id="mydiv"></div>
+</body>
+</html>

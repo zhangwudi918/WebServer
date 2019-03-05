@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-1.4.2.js"></script>
+<script type="text/javascript">
+	$(function() {
+		//给按钮绑定事件
+		$("input[value='加入购物车']").click(function() {
+			//获取name 和prive
+			var name = $(this).parent().siblings().eq(0).text();
+			var price = $(this).parent().siblings().eq(1).text();
+			
+			
+			//设置td文本
+			var nametd = $("<td></td>");
+			nametd.text(name)
+			var pricetd = $("<td></td>");
+			pricetd.text(price)
+			
+			
+			//创建数量的td
+			var numtd = $("<td></td>");
+			var moneytd = $("<td></td>");
+			var deltd = $("<td></td>");
+			var btn1 = $("<input type='button' value='-'>")
+			var tex = $("<input type='text' value='1'>")
+			tex.css({
+				"width" : "40px",
+				"text-align" : "center"
+			})
+			var btn2 = $("<input type='button' value='+'>")
+			var num = pricetd.text() * tex.val();
+			var del = $("<input type='button' value='删除'>")
+
+			btn1.click(function() {
+				var count = tex.val();
+				if (count != 0) {
+					tex.val(count - 1);
+					num = pricetd.text() * tex.val();
+					moneytd.text(num);
+				}
+
+			})
+			btn2.click(function() {
+				var count = Number(tex.val());
+
+				tex.val(count + 1);
+				num = pricetd.text() * tex.val();
+				moneytd.text(num);
+			})
+			del.click(function() {
+				$(this).parent().parent().remove();
+			})
+			
+			
+			
+			numtd.append(btn1);
+
+			numtd.append(tex);
+			numtd.append(btn2);
+			deltd.append(del)
+			moneytd.text(num);
+
+			var tr = $("<tr></tr>");
+			tr.append(nametd);
+			tr.append(pricetd);
+			tr.append(numtd);
+			tr.append(moneytd);
+			tr.append(deltd);
+			$("#total").before(tr);
+			
+			var allmoney=	function(){
+				
+				
+				
+				
+				
+				
+				$("td[colspan='5']").val("总价：0元")
+			}
+		})
+		})
+
+</script>
+<style type="text/css">
+h1 {
+	text-align: center
+}
+
+table {
+	width: 80%;
+	margin: 0 auto;
+	border: 1px solid red;
+	border-collapse: collapse; /* 让表格和单元格合并 */
+}
+
+td, th {
+	border: 1px solid red;
+	text-align: center
+}
+
+#total>td {
+	text-align: right;
+}
+</style>
+
+</head>
+<body>
+	<h1>特价商品</h1>
+
+	<table>
+
+		<tr>
+			<td>商品名称</td>
+			<td>商品单价</td>
+			<td>商品库存</td>
+			<td>好评率</td>
+			<td>操作</td>
+		</tr>
+
+		<tr>
+			<td>水杯</td>
+			<td>25</td>
+			<td>3</td>
+			<td>90%</td>
+			<td><input type="button" value="加入购物车"></td>
+		</tr>
+
+		<tr>
+			<td>鼠标</td>
+			<td>50</td>
+			<td>80</td>
+			<td>95%</td>
+			<td><input type="button" value="加入购物车"></td>
+		</tr>
+
+		<tr>
+			<td>键盘</td>
+			<td>125</td>
+			<td>30</td>
+			<td>99%</td>
+			<td><input type="button" value="加入购物车"></td>
+		</tr>
+
+		<tr>
+			<td>小米电视</td>
+			<td>2000</td>
+			<td>80</td>
+			<td>85%</td>
+			<td><input type="button" value="加入购物车"></td>
+		</tr>
+	</table>
+	<h1>购物车</h1>
+	<table>
+		<tr>
+			<th>商品名称</th>
+			<th>商品单价</th>
+			<th>购买数量</th>
+			<th>金额</th>
+			<th>操作</th>
+		</tr>
+
+		<tr id="total">
+
+			<td colspan="5">总价：0元</td>
+		</tr>
+
+	</table>
+
+
+
+</body>
+</html>

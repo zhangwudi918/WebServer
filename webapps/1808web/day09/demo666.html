@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function myfn(){
+	var obj=event.target||event.srcElement;
+	if(obj.nodeName=="INPUT"){
+		var str=obj.value;
+		if(str=="c"){
+			p1.innerText="";
+		}else if(str=="="){
+			/* 计算输入的表达式  把结果显示到p中 */
+			p1.innerText=eval(p1.innerText);
+		}else{
+			p1.innerText+=str;
+		}
+	}
+
+}
+
+</script>
+<style type="text/css">
+div{width:200px;border: 4px solid #ccc;border-radius: 4px; margin: 0 auto;overflow: hidden;}
+input{width:45px;height:45px;border:4px solid #ccc; border-radius: 4px;float: left;margin: 4px 0 4px 4px;}
+p{width:135px; height:37px; border:4px solid #ccc;margin: 4px 0 4px 4px;border-radius: 4px;float: left;overflow: hidden;line-height: 37px;}
+</style>
+</head>
+<body>
+<div onclick="myfn()">
+<p id="p1"></p>
+<input type="button" value="c">
+<input type="button" value="7">
+<input type="button" value="8" >
+<input type="button" value="9">
+<input type="button" value="/" >
+<input type="button" value="4" >
+<input type="button" value="5" >
+<input type="button" value="6" >
+<input type="button" value="*" >
+<input type="button" value="1" >
+<input type="button" value="2" >
+<input type="button" value="3" >
+<input type="button" value="-" >
+<input type="button" value="0">
+<input type="button" value="." >
+<input type="button" value="=" >
+<input type="button" value="+">
+
+</div>
+<!-- confirm   弹出确认框 -->
+<a href="http://doc.tedu.cn" onclick="return confirm('你确定离开吗？')">达内文档</a>
+
+<!-- 弹出文本框 -->
+<a href="http://doc.tedu.cn" onclick="return prompt('请输入true或在flase')">达内文档</a>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function fn(){
+	
+	var reg=new RegExp(i2.value,"i");
+	if(reg.test(i1.value)){
+		alert("正确");
+	}else{
+		alert("错误");
+	}
+}
+
+
+</script>
+</head>
+<body>
+<input type="text" id="i1">
+<input type="text" id="i2">
+<input type="button" value="校验" onclick="fn()">
+
+</body>
+</html>

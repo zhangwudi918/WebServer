@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+function addfn(){
+	/* 得到1000以内的随机数 */
+	var x=Math.floor(Math.random()*1000);
+	var y=Math.floor(Math.random()*1000);
+//创建元素对象
+var img=document.createElement("img");
+//设置图片
+img.src="../../imgs/2.gif";
+//往页面中添加元素对象
+document.body.appendChild(img);
+	//修改元素定位方式为绝对定位
+	img.style.position="absolute";
+	//修改图片距左上角的距离
+		img.style.left=x+"px";
+		img.style.top=y+"px";
+
+}
+setInterval(addfn,100);
+</script>
+</head>
+<body>
+
+</body>
+</html>

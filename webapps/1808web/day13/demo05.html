@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-1.4.2.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("input").click(function(){
+		alert("lalala");
+	})
+	
+	setTimeout(function(){
+		//模拟按钮点击事件
+		$("input").trigger("click");
+	
+	},3000)
+	//给所有div添加移入移出事件
+	$("div").hover(function(){
+		$(this).css("color","blue")
+	},function(){
+		$(this).css("color","red")
+	})
+	
+})
+
+</script>
+</head>
+<body>
+<input type="button" value="按钮">
+<div>div1</div>
+<div>div2</div>
+<div>div3</div>
+
+</body>
+</html>

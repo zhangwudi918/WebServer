@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var x=0
+onclick=function(){
+	x+=20;
+	i1.style.marginLeft=x+"px";
+}
+
+/* 定时器   第一个参数为方法，第二个参数为时间间隔*/
+ setInterval(function(){
+	 x+=1;
+		i1.style.marginLeft=x+"px";
+ },10)
+</script>
+
+</head>
+<body>
+<img src="../../imgs/2.gif" id="i1">
+</body>
+</html>

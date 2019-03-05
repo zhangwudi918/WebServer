@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+onload=function(){
+	var x=0;
+	var time=setInterval(function(){
+		var arr=document.getElementsByClassName("c1");
+		arr[x].style.color="red";
+		x+=1;
+	if(x==3){
+		clearInterval(time);
+	}
+	},2000);
+}
+</script>
+</head>
+<body>
+<div>div1</div>
+<div class="c1">div2</div>
+<div>div3</div>
+<span>span1</span>
+<span class="c1">span2</span>
+<span>span3</span>
+<h3 class="c1">啦啦啦</h3>
+</body>
+</html>

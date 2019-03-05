@@ -1,0 +1,167 @@
+@charset "UTF-8";
+body{    font: 12px "simhei", Arial, Helvetica, sans-serif;
+    color: #666;
+    margin: 0px;
+    padding: 0px;
+    background-color: #f5f5f5;}
+header{width:1000px;margin: 0 auto;overflow: hidden;/* 所有子元素全部浮动，高度识别为0 */}
+header>img{float:left;vertical-align: middle;margin:20px 0 20px 0px;}
+header>h3{float:left;margin: 30px 0 0 20px;color: #4f4d4e;font-weight: normal;font-size: 24px;}
+
+/*  ***************表单样式开始**********************/
+#form_div {
+	background-image: url(../images/regist.png);
+	width: 100%;
+	height: 560px;
+}
+
+#form_panel {
+	width: 253px;
+	background-color: rgba(0, 0, 0, 0.5);
+	float: right;
+	margin: 122px 122px 0 0;
+	padding: 10px;
+	color: white;
+	float: right;
+	margin: 122px 122px 0 0;
+	padding: 10px;
+	
+	color: white;
+}
+
+#form_panel>h3 {
+	font-size: 18px;
+	font-weight: normal; /* 去掉h3的加粗效果 */
+	margin-top: 5px;
+	border-bottom: 1px solid white;
+	padding-bottom: 5px;
+}
+
+#form_panel a {
+	font-size: 12px;
+	color: white;
+	text-decoration: none;
+	float: right;
+	margin-top: 5px;
+}
+
+.field {
+	position: relative;
+}
+
+.field>input {
+	width: 233px;
+	height: 37px;
+	border: 0;
+	padding: 0 10px;
+}
+
+.field>img {
+	position: absolute;
+	top: 5px;
+	right: 20px;
+}
+
+.field>p {
+	font-size: 12px;
+	color: red;
+	margin: 3px 0;
+}
+
+#auto_div>lable {
+	font-size: 12px;
+}
+
+#form_panel>input {
+	color: white;
+	background-color: #0aa1ed;
+	width: 253px;
+	height: 37px;
+	border: 0;
+	border-radius: 5px;
+	margin-top: 5px;
+}
+#service_div{width:1000px;margin: 30px auto;overflow: hidden;}
+
+#service_div>div{float: left;width:250px;text-align: center;}
+#service_div>div>h3{margin: 0;color: #666;font-weight: inherit;}
+#service_div>div>img{width:60px;height:60px;margin: 0 auto;}
+
+#footer_div {
+	width: 1000px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+#footer_div>div {
+	width: 333px;
+	float: left;
+	overflow: hidden;
+}
+
+footer>p {
+	text-align: center;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+ul>li {
+	width: 111px;
+	margin: 5px 0;
+	
+	text-align: center;
+}
+
+li>a {
+	text-decoration: none;
+	font-size: 12px;
+}
+
+#u1>li>ul>li>a {
+	color: #808080;
+}
+
+#u1>li>ul>li>a:hover {
+	color: #333;
+}
+
+li>img {
+	margin-left: 5px;
+}
+
+#u1>li {
+	float: left;
+	
+}
+
+#u1>li>a {
+	font-size: 14px;
+	color: #333;
+}
+
+#img3 {
+	display: block;
+}
+
+#img2 {
+	float: right;
+	position: relative;
+	right: 60px;
+}
+
+#d1 {
+	float: left;
+	position: relative;
+	left: 45px;
+}
+
+#d1>p {
+	font-size: 14px; margin-top : 0;
+	text-align: center;
+	margin-top: 0; text-align : center;
+	margin-bottom: 5px;
+}

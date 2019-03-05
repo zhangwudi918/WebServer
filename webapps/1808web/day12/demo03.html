@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-1.4.2.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#btn1").click(function(){
+		//js写法
+		/* var input=document.getElementById("i1");
+		alert(input.value); */
+		alert($("#i1").val())
+		
+	})
+	
+	$("#btn2").click(function(){
+		//得到js对象
+		var input=document.getElementById("i1");
+		//把js对象转成jq对象
+		alert($(input).val())
+		
+		
+	})
+	$("#btn3").click(function(){
+		//得到jq对象
+		var jq=$("#i1");
+		//把jq对象转成js   第一种
+		var js1=jq[0];
+		//把jq转成js  第二种
+		var js2=jq.get(0);
+		alert(js1.value+"="+js2.value)
+	})
+	
+	$("#btn4").click(function(){
+		var h3=$("<h3>啦啦啦</h3>");
+		//使用jq代码添加元素
+		//添加元素到最后面
+		/* $("body").append(h3); */
+		//添加元素到最前面
+		$("body").prepend(h3)
+		
+		
+	})
+	
+	$("#btn5").click(function(){
+		var div4=$("<div>div4<div>")
+		//插入到d2元素的下面
+		$("#d2").after(div4)
+		//插入到d2元素的前面
+//		$("#d2").before(div4)
+		//删除元素
+		$("#d2").remove();
+	})
+	
+	
+})
+
+</script>
+</head>
+<body>
+<input type="text" id="i1">
+<input type="button" value="按钮" id="btn1">
+<input type="button" value="js转jq" id="btn2">
+<input type="button" value="jq转js" id="btn3">
+<input type="button" value="添加元素" id="btn4">
+<input type="button" value="插入元素" id="btn5">
+
+<div>div1</div>
+<div id="d2">div2</div>
+<div>div3</div>
+
+</body>
+</html>

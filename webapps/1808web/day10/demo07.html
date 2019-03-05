@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function myfn(x) {
+		if (x == 1) {
+
+			var li = document.createElement("li");
+			li.innerText = i1.value;
+			myul.appendChild(li);
+		} else if (x == 2) {
+
+			var li = document.createElement("li");
+			li.innerText = i1.value;
+			myul.insertBefore(li, sh);
+		} else {
+			myul.removeChild(sh);
+		}
+
+	}
+</script>
+</head>
+<body>
+	<input type="text" id="i1">
+	<input type="button" value="添加" onclick="myfn(1)">
+	<input type="button" value="插入" onclick="myfn(2)">
+	<input type="button" value="删除" onclick="myfn(3)">
+	<hr>
+	<ul id="myul">
+		<li>北京</li>
+		<li id="sh">上海</li>
+		<li>广东</li>
+
+	</ul>
+</body>
+</html>

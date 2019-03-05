@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+var x=0;
+setInterval(function(){
+	x++;
+	imgs=document.getElementsByTagName("img");
+
+	var visibleIndex=x%imgs.length;
+	//console.log(visibleIndex);
+	//通过标签名获取页面中的多个元素
+
+	for(var i=0;i<imgs.length;i++){
+		if(visibleIndex!=i){
+			imgs[i].style.display="none";
+		}else{
+			imgs[i].style.display="block";
+
+		}
+	}
+},2000)
+
+
+</script>
+<style type="text/css">
+img{width:200px;height:150px; }
+div{width:200px;height:150px;overflow: hidden;}
+
+</style>
+</head>
+<body>
+<div>
+<img  src="../../imgs/i.jpg">
+<img  src="../../imgs/d.jpg">
+<img  src="../../imgs/g.jpg">
+<img  src="../../imgs/m.jpg">
+<img  src="../../imgs/n.jpg">
+
+</div>
+</body>
+</html>

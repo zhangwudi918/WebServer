@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	onload = function() {
+
+		changeSize()
+
+	}
+	onresize = function() {
+		changeSize()
+	}
+	function changeSize() {
+		//得到窗口宽高
+		var width = document.body.parentElement.clientWidth;
+		var height = document.body.parentElement.clientHeight;
+		document.body.style.backgroundSize = width + "px " + height + "px";
+	}
+
+	
+
+	setInterval(function() {
+		var type=Math.floor(successCount/30);
+		if(type>3){
+			type=3;
+		}
+		var img = document.createElement("img")
+		img.src = "zombimgs/zomb"+type+".png"
+
+		document.body.appendChild(img)
+		var width = document.body.parentElement.clientWidth;
+		var height = document.body.parentElement.clientHeight;
+		img.style.left = width + "px"
+		var y = Math.floor(Math.random() * (height - 90));
+		img.style.top = y + "px";
+		//给图片添加onmouseover属性
+		img.onmouseover = function() {
+			//把事件源删除
+			successCount++;
+			successh3.innerText = "成功次数：" + successCount
+			this.parentElement.removeChild(this)
+
+		}
+	}, 1000)
+
+	var successCount = 0;
+	var failCount = 0;
+	setInterval(function() {
+		var imgs = document.getElementsByTagName("img")
+
+		for (var i = 0; i < imgs.length; i++) {
+			var left = parseFloat(imgs[i].style.left);
+			imgs[i].style.left = (left - 2) + "px"
+			//越界删除
+			if (left <= -80) {
+				document.body.removeChild(imgs[i])
+				failCount++
+				failh3.innerText = "失败次数：" + failCount
+			}
+		}
+	}, 10)
+</script>
+<style type="text/css">
+body {
+overflow:hidden;
+	background-image: url("zombimgs/bg1.jpg");
+}
+
+img {
+	position: absolute;
+	width: 80px;
+	height: 90px;
+}
+
+#successh3 {
+	float: left
+}
+
+#failh3 {
+	float: right
+}
+</style>
+</head>
+<body>
+	<h3 id="successh3">成功次数：0</h3>
+	<h3 id="failh3">失败次数：0</h3>
+</body>
+</html>

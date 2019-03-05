@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的首页</title>
+	</head>
+	<body>
+		<center>
+			<!-- 
+				在页面中我们也经常指定相对路径，而页面
+				中的"./"，即当前目录指的是请求当前页面
+				时的目录
+				例如:我们请求当前index.html时在浏览器输入的路径为:
+				http://localhost:8088/myweb/index.html
+				那么浏览器理解的当前目录就是:
+				http://localhost:8088/myweb/
+				所以下面图片中指定的路径src="logo.png"实际路径为:
+				http://localhost:8088/myweb/logo.png
+			 -->
+			<img src="logo.png"><br>
+			<input type="text" size="32">
+			<input type="button" value="百度一下" onclick="alert('点你妹啊!')"><br>
+			<a href="reg.html">去注册</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="login.html">去登录</a><br>
+			<a href="showAllUser">查看所用用户</a>
+		</center>
+	</body>
+</html>
+
+
+

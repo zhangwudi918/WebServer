@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-1.4.2.js"></script>
+<script type="text/javascript">
+ $(function(){
+	$("input[type='button']").click(function(){	
+		var tr=$("<tr></tr>")
+		var nametd=$("<td></td>")
+		var agetd=$("<td></td>")
+		var saltd=$("<td></td>")
+		var deltd=$("<td></td>")
+		var delbtn=$("<input type='button' value='删除'>")
+		delbtn.click(function(){
+			//删除
+			$(this).parent().parent().remove();
+		})
+		deltd.append(delbtn);
+		nametd.text($("input:eq(0)").val())
+		agetd.text($("input:eq(1)").val())
+		saltd.text($("input:eq(2)").val())
+		tr.append(nametd);
+		tr.append(agetd);
+		tr.append(saltd);
+		tr.append(deltd);
+		$("table").append(tr);
+		
+	})
+	
+})
+ 
+
+
+</script>
+</head>
+<body>
+<input type="text" placeholder="员工姓名">
+<input type="text" placeholder="员工年龄">
+<input type="text" placeholder="员工工资">
+<input type="button" value="添加" id="i1">
+
+<hr>
+<table>
+<caption>员工表</caption>
+<tr>
+<th>姓名</th><th>年龄</th>
+<th>工资</th><th>操作</th>
+
+</tr>
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function downfn(){
+	
+	//enent.keyCode 获得键盘每个键的编码
+	var code=event.keyCode;
+	console.log("按下"+code)
+	
+	// String.fromCharCode()  通过编码转成字符
+	var str=String.fromCharCode(code);
+	console.log(str);
+	//判断如果是回车
+	if(code==13){
+		btn.click();
+	}
+}
+function upfn(){
+	console.log("松开"+event.keyCode)
+}
+onload=function(){
+	btn2.onclick=function(){
+		alert("动态绑定成功")
+	}
+}
+//在非动态绑定的事件方法中两种方式得到事件源
+//1.在标签内把事件源传递到方法中    onclick="myfn(this)"
+//2.通过event对象获取事件源 event.target
+//event.target.nodeName   获取事件源名字
+//event.srcElement.nodeName 跟上面的一样
+function myfn(){
+	//通过以下写法解决兼容性问题
+	var obj=event.target||event.srcElement;
+	alert(obj.nodeName)
+}
+
+
+
+
+</script>
+</head>
+<body>
+<input type="text" onkeydown="downfn()" onkeyup="upfn()">
+<input type="button" id="btn" value="点我试试"  onclick="alert('试试就试试')">
+<input type="button" value="再点一下试试"  id="btn2">
+<input type="button" value="获取事件源" onclick="myfn()">
+</body>
+</html>

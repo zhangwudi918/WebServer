@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/* 无参无返回值 */
+ function fn1(){
+	alert("fn1执行了");
+}
+
+//调用
+//fn1();
+/* 无参有返回值  */
+function fn4(){
+	return "fu4执行了";
+	
+}
+//alert(fn4());
+/* 有参无返回值 */
+ function fn2(name,age){
+	alert("name:"+name+"age:"+age);
+}
+
+//fn2("曹操",24);
+/* 有参有返回值 */
+function fn3(x,y){
+	return x+y;
+}
+/* var result=fn3(2,3);
+alert(result); 
+ */
+ 
+ function fn5(){
+	 alert("fn5执行了");
+ }
+ 
+ /* 第二种方式声明方法 */
+ var fn6=function(name,age){
+	 alert("name:"+name+"age:"+age);
+ }
+ 
+ //fn6("cao",312);
+</script>
+</head>
+<body>
+<!-- 在事件中一般写的都是方法的调用 -->
+<input type="button" value="调用方法" onclick="fn5()">
+<input type="text" id="myinput">
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//创建一个Person对象  有name和age属性
+function Person(name,age){
+	//声明属性并且给属性赋值
+	this.name=name;
+	this.age=age;
+	
+	//声明方法
+	this.run=function(){
+		alert("name:"+this.name+"age:"+this.age);
+	}
+}
+//创建对象
+var p=new Person("李白",28);
+//p.run();
+//创建学生对象  有学号id   姓名name  性别gender
+//给学生添加study方法  方法执行时页面弹出我叫xxx我是个x孩我正在学习
+function Student(id,name,gender){
+	this.id=id;
+	this.name=name;
+	this.gender=gender;
+	
+	this.study=function(){
+		alert("我叫"+this.name+"我是个"+this.gender+"孩，我正在学习！")
+	
+	}
+}
+var s=new Student(34,"张三","男");
+//s.study();
+
+//另类创建对象方式，创建一个无属性对象，再添加属性和方法。
+function SuperMan(){}
+var sm=new SuperMan();
+sm.name="cao";
+sm.fly=function(){alert("我是"+this.name+"我在飞！")}
+sm.fly();
+</script>
+</head>
+<body>
+
+</body>
+</html>

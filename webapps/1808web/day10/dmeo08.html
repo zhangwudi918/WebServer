@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	onload = function() {
+		var arr = document.getElementsByTagName("img");
+		for (var i = 0; i < arr.length; i++) {
+			arr[i].style.left = i * 200 + "px";
+		}
+	}
+
+	function fn1() {
+		var a = setInterval(function() {
+			var arr = document.getElementsByTagName("img");
+
+			for (var i = 0; i < arr.length; i++) {
+				var left = parseFloat(arr[i].style.left);
+				left -= 2;
+				arr[i].style.left = left + "px";
+				if (left == -200) {
+					arr[i].style.left = "400px";
+					clearInterval(a);
+				}
+			}
+
+		}, 10)
+	}
+	var b = setInterval(fn1, 3000)
+	function stop() {
+		clearInterval(b);
+	}
+	function start() {
+		clearInterval(b);
+		b = setInterval(fn1, 3000)
+	}
+	onfocus = function() {
+		start();
+	}
+	onblur = function() {
+		stop();
+	}
+</script>
+<style type="text/css">
+img {
+	width: 200px;
+	height: 150px;
+	position: absolute;
+}
+
+div {
+	width: 200px;
+	height: 150px;
+	border: 2px solid red;
+	position: relative;
+	overflow: hidden;
+}
+</style>
+</head>
+<body>
+	<div onmouseover="stop()" onmouseout="start()">
+		<img src="../../imgs/d.jpg"> <img src="../../imgs/e.jpg">
+		<img src="../../imgs/h.jpg">
+
+	</div>
+</body>
+</html>

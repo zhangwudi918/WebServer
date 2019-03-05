@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//第一种创建正则表达式的方式
+//创建一个以a开头的正则   i表示忽略大小写
+var reg1=/^a/i;
+//创建一个以m结尾的正则
+var reg2=/m$/;
+//创建一个包含两位数字的正则
+var reg3=/\d{2}/;
+//创建一个以三位数字开头的正则
+var reg4=/^\d{3}/;
+//创建一个一y开头以m结尾i中间有5位数字
+var reg5=/^y\d{5}m$/;
+//创建一个由3-5位数字组成的正则表达式
+var reg6=/^\d{3,5}$/;
+//创建一个6-10位的数字字母下划线的正则
+var reg7=/^\w{6,10}$/;
+
+//第二中创建正则表达式的方式new  RegExp(规则，模式)
+var reg2=new RegExp("^\\w{6,10}$");
+
+
+
+//和正则表达式相关的方法
+//1.查找内容
+var str="You can you up no can no bb"
+var reg=/no/g;
+//alert(str.match(reg));
+//match   字符串通过正则表达式查找方法，返回值为数组。
+alert(str.replace(reg,"不"))
+//replace也可以使用正则表达式查找
+
+
+//全局查找no
+var reg=/no/g;
+//exec执行（execute）
+//alert(reg.exec(str));//查找第一个
+//alert(reg.exec(str));//查找第二个
+
+//alert(reg.exec(str));//null代表没有了
+
+
+//2.校验文本
+/* reg=/^you/i;
+if(reg.test(str)){
+	alert("格式正确！")
+}else{
+	alert("格式错误!")
+} */
+
+
+</script>
+
+
+
+</head>
+<body>
+
+</body>
+</html>

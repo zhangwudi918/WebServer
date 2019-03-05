@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function fu1(x){
+	if(x=="c"){
+		p1.innerText="";
+	}else if(x=="="){
+		p1.innerText=eval(p1.innerText);
+	}else{
+		p1.innerText+=x;
+	}
+}
+
+</script>
+<style type="text/css">
+div{border:5px solid red;margin: 0 auto;width:465px;border-radius: 10px;}
+input{width:100px;height:100px;margin: 10px 0 10px 10px;border-radius: 10px;}
+p{display: inline-block;width:320px;border: 5px solid red;height:100px;vertical-align: middle;margin: 10px 0 10px 10px;
+border-radius: 10px;font-size: 50px;overflow: hidden;line-height: 100px;}
+</style>
+</head>
+<body>
+<div>
+<p id="p1"></p>
+
+<input type="button" value="c" onclick="fu1('c')">
+<input type="button" value="7" onclick="fu1('7')">
+<input type="button" value="8" onclick="fu1('8')">
+<input type="button" value="9" onclick="fu1('9')">
+<input type="button" value="/" onclick="fu1('/')">
+<input type="button" value="4" onclick="fu1('4')">
+<input type="button" value="5" onclick="fu1('5')">
+<input type="button" value="6" onclick="fu1('6')">
+<input type="button" value="*" onclick="fu1('*')">
+<input type="button" value="1" onclick="fu1('1')">
+<input type="button" value="2" onclick="fu1('2')">
+<input type="button" value="3" onclick="fu1('3')">
+<input type="button" value="+" onclick="fu1('+')">
+<input type="button" value="0" onclick="fu1('0')">
+<input type="button" value="." onclick="fu1('.')">
+<input type="button" value="=" onclick="fu1('=')">
+<input type="button" value="-" onclick="fu1('-')">
+
+</div>
+</body>
+</html>

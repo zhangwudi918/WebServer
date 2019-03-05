@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-1.4.2.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+	
+	
+	$("input").click(function(){
+		if($(this).val()=="隐藏"){
+			$("img").hide(2000);
+		}else if($(this).val()=="显示"){
+			//方法内可加参数
+			$("img").show(2000,function(){
+				$("img").hide(2000);
+			});
+
+		}else if($(this).val()=="上滑"){
+			$("img").slideUp(2000)
+		}else if($(this).val()=="下滑"){
+			$("img").slideDown(2000)
+		}else if($(this).val()=="淡出"){
+			$("img").fadeOut(2000)
+		}else if($(this).val()=="淡入"){
+			$("img").fadeIn(2000)
+		}else if($(this).val()=="自定义"){
+			$("img").animate({"left":"250px"},1000).animate({"left":"0"},1000).animate({"top":"250px"},1000).animate({"top":"0"},1000)
+		.animate({"width":"400px","height":"300px"}).animate({"width":"200px","height":"150px"})
+
+			
+		}
+	})
+	
+	
+	$("img").hover(function(){
+		$(this).animate({"width":"220px","height":"170px"},500)
+	},function(){
+		$(this).animate({"width":"200px","height":"150px"},500)
+
+	})
+	
+})
+
+</script>
+<style type="text/css">
+img{width:200px;height:150px;position: relative;}
+</style>
+</head>
+<body>
+<input type="button" value="隐藏">
+<input type="button" value="显示">
+<input type="button" value="上滑">
+<input type="button" value="下滑">
+<input type="button" value="淡入">
+<input type="button" value="淡出">
+<input type="button" value="自定义">
+<hr>
+<img src="../../imgs/k.jpg">
+</body>
+</html>

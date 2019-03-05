@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function myfn(){
+	var obj=event.target||event.srcElement;
+	alert("点击了"+obj.nodeName)
+	
+	
+}
+
+
+</script>
+<style type="text/css">
+div,p{border:1px solid red;}
+
+
+</style>
+</head>
+<body>
+<div onclick="myfn()">
+
+<p >
+<input type="button" value="按钮"  >
+
+</div>
+</body>
+</html>

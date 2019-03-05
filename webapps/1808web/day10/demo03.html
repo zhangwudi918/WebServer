@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	setInterval(function() {
+		var d1 = new Date();
+		myh1.innerText = d1.toLocaleTimeString();
+	}, 1000)
+
+	function start() {
+		var seconds = parseInt(i3.value) + parseInt(i2.value) * 60
+				+ parseInt(i1.value) * 3600;
+		var time = setInterval(function() {
+			seconds -= 1;
+			var hours = parseInt(seconds / 3600);
+			var minutes = parseInt(seconds % 3600 / 60);
+			i1.value = hours;
+			i2.value = minutes;
+			i3.value = seconds % 60;
+			if (seconds == 0) {
+				clearInterval(time);
+				alert("时间到！")
+			}
+		}, 1000)
+	}
+	/* 只执行一次 */
+	setTimeout(function(){alert("准备团战")},3000)
+</script>
+</head>
+<body>
+	<h1 id="myh1"></h1>
+	<input type="text" placeholder="小时" id="i1">
+	<input type="text" placeholder="分钟" id="i2">
+	<input type="text" placeholder="秒" id="i3">
+	<input type="button" value="开始倒计时" onclick="start()">
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#form_div {
+	background-image: url(../images/regist.png);
+	width: 100%;
+	height: 560px;
+}
+
+#form_panel {
+	width: 253px;
+	background-color: rgba(0, 0, 0, 0.5);
+	float: right;
+	margin: 122px 122px 0 0;
+	padding: 10px;
+	color: white;
+	float: right;
+	margin: 122px 122px 0 0;
+	padding: 10px;
+	
+	color: white;
+}
+
+#form_panel>h3 {
+	font-size: 18px;
+	font-weight: normal; /* 去掉h3的加粗效果 */
+	margin-top: 5px;
+	border-bottom: 1px solid white;
+	padding-bottom: 5px;
+}
+
+#form_panel a {
+	font-size: 12px;
+	color: white;
+	text-decoration: none;
+	float: right;
+	margin-top: 5px;
+}
+
+.field {
+	position: relative;
+}
+
+.field>input {
+	width: 233px;
+	height: 37px;
+	border: 0;
+	padding: 0 10px;
+}
+
+.field>img {
+	position: absolute;
+	top: 5px;
+	right: 20px;
+}
+
+.field>p {
+	font-size: 12px;
+	color: red;
+	margin: 3px 0;
+}
+
+#auto_div>lable {
+	font-size: 12px;
+}
+
+#form_panel>input {
+	color: white;
+	background-color: #0aa1ed;
+	width: 253px;
+	height: 37px;
+	border: 0;
+	border-radius: 5px;
+	margin-top: 5px;
+}
+</style>
+</head>
+<body>
+
+	<article>
+		<div id="form_div">
+
+			<div id="form_panel">
+				<h3>
+					登录学子商城<a href="#">新用户注册</a>
+				</h3>
+				
+				<div class="field">
+					<input type="text" placeholder="请输入你的用户名"> <img
+						src="../images/login/yhm.png">
+					<p>用户名不能为空!</p>
+				</div>
+				
+				<div class="field">
+					<input type="text" placeholder="请输入你的密码"> <img
+						src="../images/login/mm.png">
+					<p>密码不能为空!</p>
+				</div>
+
+				<div id="auto_div">
+					<input type="checkbox" id="autologin"> <label
+						for="autologin">自动登录</label> <a href="#">忘记密码</a>
+				</div>
+				
+				<input type="submit" value="登录">
+			</div>
+		</div>
+	</article>
+</body>
+</html>
